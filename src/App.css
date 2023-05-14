@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+.main-header{
+  background-color:  #FAF9F4;
+ padding: .7rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+justify-content: space-between;
+padding: 0.5rem;
+padding-bottom: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.time{
+  font-family: 'SF Pro Text';
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header2{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: small;
+  display: flex;
+  gap: 2rem;
+  /* justify-content: space-around; */
+}
+.trip{
+ font-size: 1.5rem;
+ font-weight: 600;
+ margin-top: -0.3rem;
+}
+.section2{
+  display: flex;
+  justify-content: space-between;
+}
+.doublearrow{
+  margin-top: auto;
+}
+.profile{
+  margin-left: 1rem;
+  margin-top: 0.7rem;
+}
+.section3{
+  display: flex;
+  gap: 1rem;
+}
+.text{
+  margin-top: 1rem;
+}
+.section4{
+  display: flex;
+  justify-content: space-between;
+}
+.Dot{
+  margin-top: 2rem;
+  
 }
