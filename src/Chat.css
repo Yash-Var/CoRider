@@ -1,0 +1,19 @@
+.main{
+    background-color:  #FAF9F4;
+    padding: .7rem;
+    padding-top: 5rem;
+}
+.line{
+    display: flex;
+}
+.text2{
+    width: 7rem;
+
+color: #B7B7B7;
+}
+.text3{
+    width: 7rem;
+margin-left: 1rem;
+color: #B7B7B7;
+font-size: 0.9rem;
+}
