@@ -21,6 +21,7 @@ const Chat = () => {
   const Dat = post.chats[0].time;
   const formatDate = moment(Dat).format("Do MMMM YYYY");
   console.log(formatDate);
+
   return (
     <div className="main">
       <div className="line">
