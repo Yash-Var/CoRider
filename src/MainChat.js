@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./MainChat.css";
-
+import moment from "moment";
 import Pagination from "./Pagination";
 import Message2 from "./Message2";
 const MainChat = () => {
@@ -22,13 +22,15 @@ const MainChat = () => {
   }, []);
 
   if (!post) return null;
-  {
-    // console.log(post.chats[0].message);
-  }
+
+  const Date = post.chats[0].time;
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
+  // const date = new Date("2020-07-22T13:22:10.2566789+00:00");
+  const formatDate = moment(Date).format("Do MMMM YYYY");
+  console.log(formatDate);
   return (
     <div className="chatSection">
       <Pagination
