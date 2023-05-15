@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import axios from "axios";
 import "./MainChat.css";
 const MainChat = () => {
-  const url = "http://3.111.128.67/assignment/chat?page=0";
-  const [data, setData] = useState([]);
+  const baseURL = "http://3.111.128.67/assignment/chat?page=0";
+  const [post, setPost] = React.useState(null);
 
-  const fetchInfo = () => {
-    return fetch(url)
-      .then((res) => res.json())
-      .then((d) => setData(d));
-  };
-
-  useEffect(() => {
-    fetchInfo();
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
   }, []);
 
+  if (!post) return null;
+  {
+    console.log(post);
+  }
   return (
-    <div>
+    <div className="chatSection">
       <div className="main-section">
-        <img src={data.chats[0].sender.image} className="sender" />
+        <img src={post.chats[0].sender.image} className="sender" />
       </div>
+      <div className="message">{post.chats[0].message}</div>
     </div>
   );
 };
