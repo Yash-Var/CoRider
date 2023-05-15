@@ -24,12 +24,12 @@ const MainChat = () => {
               <img src={posts.sender.image} className="sender" />
             </div>
             <div className="message">{posts.message}</div>
+            <div className="recevier">
+              <div className="message2">{posts.message}</div>
+            </div>
           </>,
         ];
       })}
-      <div className="">
-        <div className="message">{post.chats[0].message}</div>
-      </div>
     </div>
   );
 };
