@@ -17,10 +17,16 @@ const MainChat = () => {
   }
   return (
     <div className="chatSection">
-      <div className="main-section">
-        <img src={post.chats[0].sender.image} className="sender" />
-      </div>
-      <div className="message">{post.chats[0].message}</div>
+      {post.chats.map((posts) => {
+        return [
+          <>
+            <div className="main-section">
+              <img src={posts.sender.image} className="sender" />
+            </div>
+            <div className="message">{posts.message}</div>
+          </>,
+        ];
+      })}
     </div>
   );
 };

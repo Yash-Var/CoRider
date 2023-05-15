@@ -5,10 +5,11 @@ margin-top: 2rem;
 }
 .main-section{
     margin-top: 1rem !important;
-
 }
 .chatSection{
+    /* display: flex; */
     display: flex;
+    flex-direction: column;
     /* margin: 5rem ; */
 }
 .message{
