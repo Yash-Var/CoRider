@@ -11,7 +11,7 @@ const MainChat = () => {
     });
   }, []);
 
-  // if (!post) return null;
+  if (!post) return null;
   {
     console.log(post);
   }
