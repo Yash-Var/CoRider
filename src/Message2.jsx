@@ -7,7 +7,11 @@ const Message2 = ({ post }) => {
         return [
           <>
             {console.log("yash")}
-            <Message image={posts.sender.image} message={posts.message} />
+            <Message
+              image={posts.sender.image}
+              message={posts.message}
+              veri={posts.sender.is_kyc_verified}
+            />
           </>,
         ];
       })}

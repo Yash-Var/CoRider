@@ -1,6 +1,6 @@
 import React from "react";
-
-const Message = ({ image, message }) => {
+import Ver from "./Ver.png";
+const Message = ({ image, message, veri }) => {
   {
     console.log(message);
   }
@@ -9,6 +9,7 @@ const Message = ({ image, message }) => {
       {" "}
       <div className="main-section">
         <img src={image} className="sender" />
+        {veri && <img src={Ver} className="Ver" />}
       </div>
       <div className="message">{message}</div>
       <div className="recevier">
