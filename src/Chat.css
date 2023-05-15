@@ -39,6 +39,9 @@ input{
   }
   .field{
     background: #FAF9F4 !important;
+    /* position: fixed; */
+    /* margin-top: 33rem; */
+
     padding-bottom:2rem ;
   }
   .fileIcons{
