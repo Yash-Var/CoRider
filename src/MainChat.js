@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./MainChat.css";
 const MainChat = () => {
-  const baseURL = "http://3.111.128.67/assignment/chat?page=0";
+  const baseURL = "//3.111.128.67/assignment/chat?page=0";
   const [post, setPost] = useState(null);
 
   useEffect(() => {
