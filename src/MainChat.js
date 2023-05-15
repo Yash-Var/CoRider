@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./MainChat.css";
 const MainChat = () => {
   const baseURL = "http://3.111.128.67/assignment/chat?page=0";
-  const [post, setPost] = React.useState(null);
+  const [post, setPost] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
   }, []);
 
-  if (!post) return null;
+  // if (!post) return null;
   {
     console.log(post);
   }
@@ -27,6 +27,9 @@ const MainChat = () => {
           </>,
         ];
       })}
+      <div className="">
+        <div className="message">{post.chats[0].message}</div>
+      </div>
     </div>
   );
 };
