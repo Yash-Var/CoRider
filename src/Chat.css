@@ -17,3 +17,40 @@ margin-left: 1rem;
 color: #B7B7B7;
 font-size: 0.9rem;
 }
+.input{
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+display: flex;
+position: absolute;
+margin-left: 1rem ;
+margin-right: 2.5rem !important;
+}
+input:focus{
+    /* width: 5rem; */
+    outline: none;
+    border:none
+}
+input{
+    outline: none;
+    border:none
+}
+.input:focus-within {
+    border: 3px solid #555;
+  }
+  .field{
+    background: #FAF9F4 !important;
+    padding-bottom:2rem ;
+  }
+  .fileIcons{
+display: flex;
+gap: 2rem;
+background-color: #fff;
+padding: 1rem;
+  }
+  .name{
+    margin-top: 4rem;
+    margin-left: 8rem;
+   
+margin-bottom: 0;
+    width: 6rem;
+  }
