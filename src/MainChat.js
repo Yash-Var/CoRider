@@ -4,7 +4,16 @@ import "./MainChat.css";
 import moment from "moment";
 import Pagination from "./Pagination";
 import Message2 from "./Message2";
-const MainChat = () => {
+import App from "./App";
+import { Link, useLocation } from "react-router-dom";
+import "./Chat.css";
+import Input from "./Input";
+const MainChat = (props) => {
+  const location = useLocation();
+  const propsData = location.state;
+
+  console.log(propsData);
+
   const [coinsData, setCoinsData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(2);
@@ -15,7 +24,7 @@ const MainChat = () => {
     axios.get(baseURL).then((response) => {
       setPost(response.data);
       {
-        console.log(response.data.chats);
+        // console.log(response.data.chats);
       }
       setCoinsData(response.data.chats);
     });
@@ -30,17 +39,24 @@ const MainChat = () => {
   const currentPosts = coinsData.slice(firstPostIndex, lastPostIndex);
   // const date = new Date("2020-07-22T13:22:10.2566789+00:00");
   const formatDate = moment(Date).format("Do MMMM YYYY");
-  console.log(formatDate);
+  // console.log(formatDate);
+
   return (
-    <div className="chatSection">
-      <Pagination
-        totalPosts={5}
-        postsPerPage={postsPerPage}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
-      <Message2 post={currentPosts} />
-    </div>
+    <>
+      <App />
+      <div className="chatSection">
+        {coinsData.map((item) => {
+          console.log("manvi");
+          console.log(item);
+          console.log("manvi");
+          console.log(item);
+          if (item.sender.user_id === propsData) {
+            return [<Message2 post={item} />];
+          }
+        })}
+      </div>
+      <Input />
+    </>
   );
 };
 

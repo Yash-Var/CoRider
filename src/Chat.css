@@ -57,3 +57,24 @@ padding: 1rem;
 margin-bottom: 0;
     width: 6rem;
   }
+  .fetch_image{
+    border-radius: 100%;
+    width: 100px !important;
+}
+.imagess2{
+    /* text-align: center; */
+    /* background-color: aqua; */
+    display: flex;
+    /* justify-content: center; */
+    background-color: rgb(232, 247, 247) !important;
+    width: 220px;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+.user{
+    font-size: large;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
